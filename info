@@ -13,7 +13,7 @@
             var json = JSON.parse(request.responseText);
             document.getElementById('togoro').innerHTML = 'New Text';
         };
-    };
+    }
         
     </script>
 </head>
