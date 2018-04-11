@@ -5,7 +5,7 @@
     <title></title>
    
     <script  type="text/javascript">
-    
+        document.getElementById('togoro').innerHTML = 'New Text';
         var request = new XMLHttpRequest();
         request.open('GET', 'https://togoro360.github.io/togoro/products.json');
         request.onload = function() {
