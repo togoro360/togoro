@@ -7,7 +7,7 @@
     function a(){
         document.getElementById('togoro').innerHTML = 'New Text';
         var request = new XMLHttpRequest();
-        request.onload = function() {
+        request.onreadystatechange = function() {
             var json = JSON.parse(request.responseText);
             document.getElementById('togoro').innerHTML = 'A';
         };
