@@ -7,11 +7,14 @@
     function a(){
         document.getElementById('togoro').innerHTML = 'New Text';
         var request = new XMLHttpRequest();
-        request.open('GET', 'https://togoro360.github.io/togoro/products.json');
         request.onload = function() {
             var json = JSON.parse(request.responseText);
-            document.getElementById('togoro').innerHTML = 'New Text';
+            document.getElementById('togoro').innerHTML = 'A';
         };
+        request.open('GET', 'https://togoro360.github.io/togoro/products.json', true);
+        
+        
+        request.send()
     }
         
     </script>
