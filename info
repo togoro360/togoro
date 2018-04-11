@@ -10,11 +10,11 @@
         request.open('GET', 'https://togoro360.github.io/togoro/products.json');
         request.onload = function() {
             var json = JSON.parse(request.responseText);
-            document.getElementById('h1_id').innerHTML = 'New Text';
+            document.getElementById('togoro').innerHTML = 'New Text';
         };
     </script>
 </head>
 <body>
-    <h1 id='h1_id'>Welcome</h1>
+    <h1 id='togoro'>Welcome</h1>
 </body>
 </html>
