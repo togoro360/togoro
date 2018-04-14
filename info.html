@@ -31,18 +31,11 @@
             request.send()
         }
            
-        $.ajax({
-            type: "POST",
-            url: "https://togoro360.github.io/togoro/pycode.py",
-            success: callbackFunc
-        }).done(function( o ) {
-            // do something
-        });
-        
-        function callbackFunc(response) {
-            // do something with the response
-            document.getElementById('h2_id').innerHTM = response;
-        }
+       var PythonShell = require('python-shell');
+       //you can use error handling to see if there are any errors
+       PythonShell.run('https://togoro360.github.io/togoro/pycode.py', options, function (err, results) { 
+           document.getElementById('h4_id').innerHTML = 'New Text';
+       }
         
     </script>
 </body>
