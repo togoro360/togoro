@@ -30,11 +30,6 @@
             request.open('GET', 'https://togoro360.github.io/togoro/products.json', true);
             request.send()
         }
-        
-        function callbackFunc(response) {
-            // do something with the response
-            document.getElementById('h2_id').innerHTM = response;
-        }
            
         $.ajax({
             type: "POST",
@@ -44,9 +39,11 @@
         }).done(function( o ) {
             // do something
         });
-    });
-});
-    
+        
+        function callbackFunc(response) {
+            // do something with the response
+            document.getElementById('h2_id').innerHTM = response;
+        }
         
     </script>
 </body>
