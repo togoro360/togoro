@@ -10,22 +10,15 @@
     <h1 id='togoro'>Welcome</h1>
     <a onClick='a()'>click</a>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript">
-        document.getElementById('togoro').innerHTML = 'BB';
-        function a(){
-            document.getElementById('togoro').innerHTML = 'New Text';
-            var request = new XMLHttpRequest();
-            request.onreadystatechange = function() {
-                if(request.responseText == ""){
-                    return;
-                }
-                var json = JSON.parse(request.responseText);
-                document.getElementById('togoro').innerHTML = json.name;
-            };
-        request.open('GET', 'https://togoro360.github.io/togoro/products.json', true);
-        
-        
-        request.send()
+       
+            
+        $(document).ready(function(){
+        $("a").click(function(){
+        $("h1").hide();
+    });
+});
     }
         
     </script>
