@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    
+    
+</head>
+<body>
+    <h1 id='togoro'>Welcome</h1>
+    <a>click</a>
+    <h2 id='h2_id'>h2</h2>
+    <h3 id='h3_id'>h3</h3>
+    <h4 id='h4_id'>h4</h4>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  type="text/javascript">
+        document.getElementById('togoro').innerHTML = 'BB';
+        function a(){
+            document.getElementById('togoro').innerHTML = 'New Text';
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if(request.responseText == ""){
+                    return;
+                }
+                var json = JSON.parse(request.responseText);
+                document.getElementById('togoro').innerHTML = json.name;
+            };
+            request.open('GET', 'https://togoro360.github.io/togoro/products.json', true);
+            request.send()
+        }
+           
+       var PythonShell = require('python-shell');
+       //you can use error handling to see if there are any errors
+       PythonShell.run('https://togoro360.github.io/togoro/pycode.py', options, function (err, results) { 
+           document.getElementById('h4_id').innerHTML = 'New Text';
+       });
+        
+    </script>
+</body>
+</html>
